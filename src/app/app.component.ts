@@ -1,10 +1,13 @@
-import { ModalRef, ModalService } from './shared/components/modal/modal.service';
+import { fade } from './shared/animations/fade.animation';
+import { ModalService } from './shared/components/modal/modal.service';
+import { ModalRef } from "./shared/models/modal-ref.model";
 import { Component, ViewChild, TemplateRef } from '@angular/core';
 
 @Component({
 	selector: 'app-root',
 	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss']
+	styleUrls: ['./app.component.scss'],
+	animations: [fade]
 })
 export class AppComponent {
 
@@ -13,6 +16,8 @@ export class AppComponent {
 	title = 'A11yP2';
 
 	modalRef!: ModalRef;
+
+	newsLetter: Boolean = false;
 
 	constructor(private modalService: ModalService) { }
 

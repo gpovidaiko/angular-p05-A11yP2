@@ -13,3 +13,7 @@ Criação do componente _modal_ que será utilizado como referência ao longo do
 Estruturação do template do componente de _modal_. Visto a utilização de _'ng-container'_ e de sua diretiva ngTemplateOutlet, que serve para a renderização de um template passado por referência.
 Em _ModalService_ foi implementado o necessário para fabricar instâncias de _ModalComponent_ utilizando _ComponentFactoryResolver_, _ComponentFactory_ e _Injector_. _ComponentFactoryResolver_ e _ComponentFactory_ foram deprecados a partir da versão 13 do angular, então será necessário uma atualização dessa parte ao final do módulo.
 Implementação do serviço _BodyInjectorService_ responsável por acoplar o template dos componentes dinamicamente criados ao _DOM_
+
+## 03. Lapidando o nosso componente
+
+Estilização do componente de _modal_. Visto como trabalhar com animações no _Angular_ importando o módulo _BrowserAnimationsModule_ ao módulo principal da aplicação. Visto como dar suporte à animações em _browser_ mais antigos através de uma configuração no arquivo _polyfills.ts_. Criação de arquivos dedicados à representar a animação, podendo ser reaproveitada em qualquer componente ou elemento do template. Visto o funcionamento das funções _trigger_, _transition_, _style_ e _animate_ para trabalhar com animações em Angular.
