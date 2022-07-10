@@ -21,3 +21,11 @@ Estilização do componente de _modal_. Visto como trabalhar com animações no 
 ## 04. Acessibilidade
 
 Implementação de navegação pelo teclado seguindo regras da [_WCAG_](https://www.w3.org/WAI/ARIA/apg/example-index/dialog-modal/dialog). Implementação da diretiva _FocusTrap_ para prender a navegação por teclado através da modal, quando esta estiver aberta. Implementação da diretiva _FocusBack_ para retornar a navegação ao último elemento selecionado antes da modal ser aberta.
+
+
+## 05. Avançando na acessibilidade
+
+Implementação de formulário reativo, suas validações e suas mensagens de erro. Inclusão de alguns atributos _aria_ para auxiliar leitores de tela.
+No _template_ do componente de _modal_ foi utilizado o atributo _role_ com o valor _'dialog'_ para dizer quem se comporta como uma caixa de diálogo. O atributo _aria-modal_ para indicar ao leitor de tela ignorar qualquer conteúdo fora da modal (interpreto como um funcionamento semelhante à diretiva _FocusTrap_ que foi implementada). Atributo _aria-label_ para o leitor de tela saber aonde ler o título da caixa de diálogo.
+Em relação ao formulário apresentado pela _modal_, foi utilizado o atributo _aria-disabled_ no botão _submit_ recebendo o estado de invalidade do formulário, para que o leitor de tela continue sendo capaz de selecionar o botão para leitura, mas que o leia como um botão desabilitado. Porém isso ainda permite o botão ser executado, havendo a necessidade de evitar sua execução de uma forma mais programática. Para os campos que apresentam alguma validação, foi utilizado o atributo _aria-invalid_ para que o leitor de tela seja capaz de identificar quando o campo está inválido e o atributo _aria-describedby_ apontando para o _id_ do elemento com a mensagem de erro, para que o leitor seja capaz de ler a mensagem de erro como descrição para o campo.
+Foi exemplificado que mesmo seguindo todas as diretrizes de acessibilidade para os leitores de tela, nem todas são suportadas. A exemplo, o atributo _aria-describedby_ não foi interpretado pelo _Chromevox_, leitor de tela utilizado ao longo do curso e de fácil acesso. Mas o leitor de tela _Jaws_, uma ferramenta paga, deu suporte a leitura desse atributo.
