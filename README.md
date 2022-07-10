@@ -17,3 +17,7 @@ Implementação do serviço _BodyInjectorService_ responsável por acoplar o tem
 ## 03. Lapidando o nosso componente
 
 Estilização do componente de _modal_. Visto como trabalhar com animações no _Angular_ importando o módulo _BrowserAnimationsModule_ ao módulo principal da aplicação. Visto como dar suporte à animações em _browser_ mais antigos através de uma configuração no arquivo _polyfills.ts_. Criação de arquivos dedicados à representar a animação, podendo ser reaproveitada em qualquer componente ou elemento do template. Visto o funcionamento das funções _trigger_, _transition_, _style_ e _animate_ para trabalhar com animações em Angular.
+
+## 04. Acessibilidade
+
+Implementação de navegação pelo teclado seguindo regras da [_WCAG_](https://www.w3.org/WAI/ARIA/apg/example-index/dialog-modal/dialog). Implementação da diretiva _FocusTrap_ para prender a navegação por teclado através da modal, quando esta estiver aberta. Implementação da diretiva _FocusBack_ para retornar a navegação ao último elemento selecionado antes da modal ser aberta.

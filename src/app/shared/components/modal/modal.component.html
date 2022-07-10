@@ -1,5 +1,5 @@
-<div class="modal-overlay" (click)="selfRef.close()">
-	<div class="modal-content" (click)="$event.stopPropagation()">
+<div class="modal-overlay" (click)="selfRef.close()" (keydown.esc)="selfRef.close()">
+	<div appFocusTrap appFocusBack class="modal-content" (click)="$event.stopPropagation()">
 		<h1 class="modal-title">{{ config.title }}</h1>
 
 		<ng-container *ngTemplateOutlet="config.templateRef"></ng-container>
